@@ -1,0 +1,31 @@
+{
+  "name": "gadget-icons",
+  "version": "0.1.1",
+  "description": "Carefully drawn SVG icons for modern hardware, cameras, computing, wearables, and home technology.",
+  "type": "module",
+  "main": "icons.mjs",
+  "exports": {
+    ".": "./icons.mjs",
+    "./icons/*": "./icons/*"
+  },
+  "files": [
+    "icons",
+    "icons.mjs",
+    "preview.svg"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "keywords": [
+    "icons",
+    "svg",
+    "gadgets",
+    "tech"
+  ],
+  "author": "Jash Jacob",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jashjacob/gadget-icons.git"
+  }
+}
