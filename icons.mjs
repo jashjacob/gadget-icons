@@ -21,7 +21,7 @@
 //     simpler. Multi-fill stays for objects whose real identity depends on
 //     several small elements (button cluster, driver row, twin lenses).
 //   - draw straight-on. No side views, no pseudo-3D — every icon in this set
-//     shares one honest front angle, which is most of why 29 unrelated
+//     shares one honest front angle, which is most of why many unrelated
 //     objects read as one family instead of a grab-bag.
 //   - max ~3 visual layers (body, functional component(s), one signature
 //     detail). If you need a 4th, the icon is probably trying to say too much.
@@ -37,6 +37,10 @@ export const icons = {
   headphones: {
     label: 'Headphones',
     paths: '<path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="2.5" y="13" width="4" height="6" rx="3"/><rect x="17.5" y="13" width="4" height="6" rx="3"/>'
+  },
+  microphone: {
+    label: 'Microphone',
+    paths: '<rect x="8" y="2.5" width="8" height="12" rx="4"/><path d="M5.5 10.5v1a6.5 6.5 0 0 0 13 0v-1M12 18v3M8.5 21h7"/>'
   },
   earbuds: {
     label: 'Earbuds',
@@ -62,6 +66,14 @@ export const icons = {
     label: 'Camera',
     paths: '<rect x="2.5" y="7" width="19" height="13" rx="1.5"/><circle cx="12" cy="13.5" r="4"/><path d="M8 7l1.5-2.5h5L16 7"/>'
   },
+  'camera-lens': {
+    label: 'Camera lens',
+    paths: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5.5"/><path d="M12 6.5l4.8 2.8v5.5L12 17.5l-4.8-2.7V9.3z"/>'
+  },
+  tripod: {
+    label: 'Tripod',
+    paths: '<rect x="7" y="3" width="10" height="4" rx="1.5"/><path d="M12 7v5M7.5 12h9M12 12l-4 9M12 12l4 9M12 12v9"/>'
+  },
   'vlog-camera': {
     label: 'Vlog camera',
     paths: '<rect x="3" y="6" width="13" height="10" rx="1.5"/><circle cx="9.5" cy="11" r="3"/><rect x="17" y="8" width="4.5" height="6" rx="1.5"/>'
@@ -82,6 +94,14 @@ export const icons = {
     label: 'Smartwatch',
     paths: '<rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M9 7V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V7M9 17v3.5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1V17"/><line x1="17.3" y1="10.5" x2="19" y2="10.5"/>'
   },
+  'smart-glasses': {
+    label: 'Smart glasses',
+    paths: '<rect x="2.5" y="8" width="8" height="7" rx="3"/><rect x="13.5" y="8" width="8" height="7" rx="3"/><path d="M10.5 10.5h3M2.5 9L2 7M21.5 9l.5-2"/><circle cx="19.5" cy="9.8" r="0.7" fill="currentColor" stroke="none"/>'
+  },
+  'smart-ring': {
+    label: 'Smart ring',
+    paths: '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5"/><rect x="10" y="18.5" width="4" height="1.5" rx="0.75" fill="currentColor" stroke="none"/>'
+  },
   tablet: {
     label: 'Tablet',
     paths: '<rect x="4" y="2.5" width="16" height="19" rx="1.5"/><circle cx="12" cy="19" r="0.9" fill="currentColor" stroke="none"/>'
@@ -98,6 +118,18 @@ export const icons = {
     label: 'Power bank',
     paths: '<rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M13 6l-4 7h3l-1 5 5-8h-3z" fill="currentColor" stroke="none"/>'
   },
+  charger: {
+    label: 'Charger',
+    paths: '<path d="M9 5V2.5M15 5V2.5"/><rect x="6.5" y="5" width="11" height="16.5" rx="1.5"/><path d="M10 17.5h4"/>'
+  },
+  'usb-cable': {
+    label: 'USB cable',
+    paths: '<rect x="3" y="2.5" width="7" height="4.5" rx="1.2"/><rect x="15.5" y="3.25" width="5.5" height="3" rx="1.5"/><path d="M6.5 7v5a5.5 5.5 0 0 0 11 0V6.25M5 4.75h3"/>'
+  },
+  'usb-hub': {
+    label: 'USB hub',
+    paths: '<rect x="3" y="6" width="18" height="12" rx="1.5"/><path d="M2 12h1M7 9.5h3v5H7zM14 9.5h3v5h-3z"/>'
+  },
   backpack: {
     label: 'Backpack',
     paths: '<path d="M9.5 6V3.5a2.5 2.5 0 0 1 5 0V6"/><rect x="6" y="6" width="12" height="15" rx="3"/><path d="M6 11.5h12"/><rect x="9" y="16" width="6" height="4" rx="1.2"/>'
@@ -105,6 +137,10 @@ export const icons = {
   'mini-pc': {
     label: 'Mini PC',
     paths: '<rect x="3" y="6" width="18" height="12" rx="1.5"/><circle cx="7" cy="9" r="0.9" fill="currentColor" stroke="none"/><path d="M14 9h4M14 12h4M14 15h4"/>'
+  },
+  nas: {
+    label: 'NAS',
+    paths: '<rect x="5" y="2.5" width="14" height="19" rx="1.5"/><rect x="7.5" y="5.5" width="9" height="4.5" rx="1.2"/><rect x="7.5" y="11.5" width="9" height="4.5" rx="1.2"/><circle cx="12" cy="18.5" r="0.9" fill="currentColor" stroke="none"/>'
   },
   gpu: {
     label: 'GPU',
@@ -122,6 +158,14 @@ export const icons = {
     label: 'Smart speaker',
     paths: '<rect x="7" y="3" width="10" height="18" rx="5"/><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="0.9" fill="currentColor" stroke="none"/>'
   },
+  'smart-display': {
+    label: 'Smart display',
+    paths: '<rect x="3" y="3.5" width="18" height="14" rx="3"/><circle cx="12" cy="6.2" r="0.7" fill="currentColor" stroke="none"/><path d="M8.5 21h7L14 17.5h-4z"/>'
+  },
+  'security-camera': {
+    label: 'Security camera',
+    paths: '<path d="M5 9a7 7 0 0 1 14 0v2H5z"/><path d="M8 11v2a4 4 0 0 0 8 0v-2"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/><path d="M7 4h10M12 4v2"/>'
+  },
   soundbar: {
     label: 'Soundbar',
     paths: '<rect x="2" y="9" width="20" height="6" rx="3"/><circle cx="7" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="17" cy="12" r="1" fill="currentColor" stroke="none"/>'
@@ -137,6 +181,10 @@ export const icons = {
   console: {
     label: 'Console',
     paths: '<rect x="2.5" y="8" width="19" height="9" rx="4.5"/><path d="M7 10.5v3M5.5 12h3"/><circle cx="16" cy="10.8" r="0.9" fill="currentColor" stroke="none"/><circle cx="18" cy="12.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="14" cy="12.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="16" cy="14.2" r="0.9" fill="currentColor" stroke="none"/>'
+  },
+  'handheld-console': {
+    label: 'Handheld console',
+    paths: '<rect x="2.5" y="6.5" width="19" height="11" rx="3"/><rect x="8.5" y="8.5" width="7" height="7" rx="1.2"/><path d="M5.5 9.5v5M3.5 12h4"/><circle cx="18.5" cy="10.5" r="0.8" fill="currentColor" stroke="none"/><circle cx="17.2" cy="13.5" r="0.8" fill="currentColor" stroke="none"/>'
   },
   'vr-headset': {
     label: 'VR headset',
