@@ -9,12 +9,11 @@
 //   - stroke-width 1.6, stroke-linecap/linejoin round. Set once in svg() and
 //     scripts/build.mjs, not per icon.
 //   - fill: none by default. rx="1.5" for rigid/hard-shelled objects, "3" for
-//     soft/held/worn ones — except a true capsule shape (mouse, smart-speaker,
-//     console body) keeps its half-dimension pill radius; flattening those to
-//     3 breaks the silhouette that makes them legible. See mouse/smart-speaker/
-//     console below for the pattern.
+//     soft/held/worn ones — except a true capsule shape (mouse or controller
+//     body) keeps its half-dimension pill radius; flattening those to 3 breaks
+//     the silhouette that makes them legible. See mouse/controller below.
 //   - one filled element per icon (a dot or bolt, stroke="none"), placed only
-//     where an outline would vanish at icon size. Exceptions: console,
+//     where an outline would vanish at icon size. Exceptions: controller,
 //     soundbar, vr-headset — at this radius, a stroke-width this close to the
 //     shape's own radius makes an "unfilled" circle render as a smudged blob
 //     instead of a clean ring, so the one-fill rule made them worse, not
@@ -80,7 +79,7 @@ export const icons = {
   },
   'action-camera': {
     label: 'Action camera',
-    paths: '<rect x="5" y="5" width="14" height="14" rx="1.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/>'
+    paths: '<rect x="3" y="6" width="18" height="12" rx="1.5"/><circle cx="15.5" cy="12" r="3.5"/><rect x="5.5" y="8.5" width="4" height="2.5" rx="0.8"/><circle cx="7.5" cy="14.5" r="0.7" fill="currentColor" stroke="none"/>'
   },
   webcam: {
     label: 'Webcam',
@@ -146,9 +145,13 @@ export const icons = {
     label: 'GPU',
     paths: '<rect x="2.5" y="6" width="19" height="10" rx="1.5"/><circle cx="8" cy="11" r="2.5"/><circle cx="16" cy="11" r="2.5"/><path d="M2.5 16v3M6 16v2"/>'
   },
+  processor: {
+    label: 'Processor',
+    paths: '<rect x="3" y="3" width="18" height="18" rx="1.5"/><rect x="9" y="9" width="6" height="6" rx="1.5"/><path d="M3 7h2M3 11h2M3 15h2M19 7h2M19 11h2M19 15h2M7 3v2M11 3v2M15 3v2M7 19v2M11 19v2M15 19v2"/>'
+  },
   motherboard: {
     label: 'Motherboard',
-    paths: '<rect x="3" y="3" width="18" height="18" rx="1.5"/><rect x="9" y="9" width="6" height="6" rx="1.5"/><path d="M3 7h2M3 11h2M3 15h2M19 7h2M19 11h2M19 15h2M7 3v2M11 3v2M15 3v2M7 19v2M11 19v2M15 19v2"/>'
+    paths: '<rect x="3" y="3" width="18" height="18" rx="1.5"/><rect x="5.5" y="5.5" width="7" height="7" rx="1.2"/><path d="M15 5.5v9M18 5.5v9M12.5 9H15M12.5 12H15M5.5 16h4v3M15 17h3"/><circle cx="18" cy="18.5" r="0.7" fill="currentColor" stroke="none"/>'
   },
   pc: {
     label: 'PC',
@@ -156,7 +159,7 @@ export const icons = {
   },
   'smart-speaker': {
     label: 'Smart speaker',
-    paths: '<rect x="7" y="3" width="10" height="18" rx="5"/><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="0.9" fill="currentColor" stroke="none"/>'
+    paths: '<rect x="6" y="3" width="12" height="18" rx="4"/><path d="M9 7h6"/><circle cx="12" cy="15" r="3"/>'
   },
   'smart-display': {
     label: 'Smart display',
@@ -172,15 +175,19 @@ export const icons = {
   },
   ssd: {
     label: 'SSD',
-    paths: '<rect x="4" y="6" width="16" height="12" rx="1.5"/><path d="M8 6v12"/><circle cx="16" cy="12" r="1" fill="currentColor" stroke="none"/>'
+    paths: '<rect x="2.5" y="7" width="19" height="10" rx="1.5"/><rect x="5" y="9.5" width="4" height="5" rx="0.8"/><rect x="11" y="9.5" width="4" height="5" rx="0.8"/><circle cx="19" cy="12" r="1"/>'
   },
   projector: {
     label: 'Projector',
     paths: '<rect x="2.5" y="7" width="15" height="9" rx="1.5"/><circle cx="17.5" cy="11.5" r="2.5"/><path d="M20.5 8l3-2.5M20.5 15l3 2.5"/>'
   },
+  controller: {
+    label: 'Controller',
+    paths: '<rect x="2.5" y="8" width="19" height="9" rx="4.5"/><path d="M7 10.5v3M5.5 12h3"/><circle cx="16" cy="10.8" r="0.9" fill="currentColor" stroke="none"/><circle cx="18" cy="12.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="14" cy="12.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="16" cy="14.2" r="0.9" fill="currentColor" stroke="none"/>'
+  },
   console: {
     label: 'Console',
-    paths: '<rect x="2.5" y="8" width="19" height="9" rx="4.5"/><path d="M7 10.5v3M5.5 12h3"/><circle cx="16" cy="10.8" r="0.9" fill="currentColor" stroke="none"/><circle cx="18" cy="12.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="14" cy="12.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="16" cy="14.2" r="0.9" fill="currentColor" stroke="none"/>'
+    paths: '<path d="M8 3h8l1.5 18h-11z"/><path d="M12.5 3L14 21M9 8h3.5"/><circle cx="10" cy="17.5" r="0.8" fill="currentColor" stroke="none"/>'
   },
   'handheld-console': {
     label: 'Handheld console',
