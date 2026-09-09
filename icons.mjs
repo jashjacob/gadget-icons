@@ -169,6 +169,10 @@ export const icons = {
     label: 'Security camera',
     paths: '<path d="M5 9a7 7 0 0 1 14 0v2H5z"/><path d="M8 11v2a4 4 0 0 0 8 0v-2"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/><path d="M7 4h10M12 4v2"/>'
   },
+  'robot-vacuum': {
+    label: 'Robot vacuum',
+    paths: '<circle cx="12" cy="13" r="8"/><rect x="9" y="3" width="6" height="3" rx="1.5"/><path d="M7.5 14h9M9 18h6"/>'
+  },
   soundbar: {
     label: 'Soundbar',
     paths: '<rect x="2" y="9" width="20" height="6" rx="3"/><circle cx="7" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="17" cy="12" r="1" fill="currentColor" stroke="none"/>'
