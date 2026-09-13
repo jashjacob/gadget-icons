@@ -1,18 +1,5 @@
 import { icons, names } from './icons-data.js';
-
-const categories = {
-  Computing: ['laptop', 'monitor', 'keyboard', 'mouse', 'mini-pc', 'nas', 'gpu', 'processor', 'motherboard', 'pc', 'ssd'],
-  Cameras: ['camera', 'camera-lens', 'tripod', 'vlog-camera', 'action-camera', 'webcam', 'drone'],
-  Audio: ['headphones', 'microphone', 'earbuds', 'smart-speaker', 'soundbar'],
-  'Mobile & wearables': ['phone', 'smartwatch', 'smart-glasses', 'smart-ring', 'tablet', 'e-reader'],
-  'Smart home': ['tv', 'router', 'smart-display', 'security-camera', 'robot-vacuum', 'projector'],
-  Gaming: ['controller', 'console', 'handheld-console', 'vr-headset'],
-  Accessories: ['powerbank', 'charger', 'usb-cable', 'usb-hub', 'backpack']
-};
-
-const categoryFor = Object.fromEntries(
-  Object.entries(categories).flatMap(([category, iconNames]) => iconNames.map((name) => [name, category]))
-);
+import { categories, categoryFor, matchesSearch, javascriptSnippet, iconLink } from './catalog.js';
 
 const state = {
   query: '',
@@ -46,7 +33,7 @@ function svgMarkup(name, { size = state.size, stroke = state.stroke, ariaHidden 
 }
 
 function rawSvg(name) {
-  return `${svgMarkup(name, { size: 24, stroke: state.stroke }).replace(' aria-hidden="true"', '')}\n`;
+  return `${svgMarkup(name).replace(' aria-hidden="true"', '')}\n`;
 }
 
 function showToast(message) {
@@ -67,8 +54,12 @@ async function copyText(text, successMessage) {
     textarea.style.opacity = '0';
     document.body.append(textarea);
     textarea.select();
-    document.execCommand('copy');
+    const copied = document.execCommand('copy');
     textarea.remove();
+    if (!copied) {
+      showToast('Copy unavailable. Use Download to save the SVG.');
+      return;
+    }
   }
   showToast(successMessage);
 }
@@ -77,8 +68,7 @@ function visibleNames() {
   const query = state.query.trim().toLowerCase();
   return names.filter((name) => {
     const matchesCategory = state.category === 'All' || categoryFor[name] === state.category;
-    const haystack = `${name} ${icons[name].label} ${categoryFor[name]}`.toLowerCase();
-    return matchesCategory && (!query || haystack.includes(query));
+    return matchesCategory && matchesSearch(name, icons[name].label, query);
   });
 }
 
@@ -113,15 +103,18 @@ function renderFilters() {
   }).join('');
 }
 
-function openDetails(name) {
+function openDetails(name, updateUrl = true) {
+  if (!names.includes(name)) return;
   state.selected = name;
   const icon = icons[name];
   document.querySelector('#dialog-preview').innerHTML = svgMarkup(name, { size: 126, stroke: state.stroke });
   document.querySelector('#dialog-category').textContent = categoryFor[name];
   document.querySelector('#dialog-title').textContent = icon.label;
   document.querySelector('#dialog-name').textContent = name;
-  document.querySelector('#code-preview').textContent = `svg('${name}', { size: 24, strokeWidth: ${state.stroke} })`;
-  dialog.showModal();
+  document.querySelector('#code-preview').textContent = javascriptSnippet(name, state.size, state.stroke);
+  document.querySelector('#export-spec').textContent = `${state.size} × ${state.size} px · ${state.stroke} stroke`;
+  if (!dialog.open) dialog.showModal();
+  if (updateUrl) history.pushState(null, '', iconLink(location.href, name, state.size, state.stroke));
 }
 
 function renderHero() {
@@ -145,7 +138,9 @@ filters.addEventListener('click', (event) => {
   const button = event.target.closest('[data-category]');
   if (!button) return;
   state.category = button.dataset.category;
-  renderFilters();
+  filters.querySelectorAll('[data-category]').forEach((filter) => {
+    filter.setAttribute('aria-pressed', String(filter === button));
+  });
   renderGrid();
 });
 
@@ -187,6 +182,13 @@ document.querySelector('#install-copy').addEventListener('click', () => {
 });
 
 document.querySelector('#dialog-close').addEventListener('click', () => dialog.close());
+dialog.addEventListener('close', () => {
+  state.selected = null;
+  const url = new URL(location.href);
+  if (!url.searchParams.has('icon')) return;
+  for (const key of ['icon', 'size', 'stroke']) url.searchParams.delete(key);
+  history.replaceState(null, '', url);
+});
 dialog.addEventListener('click', (event) => {
   if (event.target === dialog) dialog.close();
 });
@@ -196,7 +198,11 @@ document.querySelector('#copy-svg').addEventListener('click', () => {
 });
 
 document.querySelector('#copy-js').addEventListener('click', () => {
-  if (state.selected) copyText(`svg('${state.selected}', { size: 24, strokeWidth: ${state.stroke} });`, 'JavaScript copied');
+  if (state.selected) copyText(javascriptSnippet(state.selected, state.size, state.stroke), 'JavaScript copied');
+});
+
+document.querySelector('#copy-link').addEventListener('click', () => {
+  if (state.selected) copyText(iconLink(location.href, state.selected, state.size, state.stroke).href, 'Icon link copied');
 });
 
 document.querySelector('#download-svg').addEventListener('click', () => {
@@ -207,12 +213,13 @@ document.querySelector('#download-svg').addEventListener('click', () => {
   link.href = url;
   link.download = `${state.selected}.svg`;
   link.click();
-  URL.revokeObjectURL(url);
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
   showToast(`${icons[state.selected].label} downloaded`);
 });
 
 const themeToggle = document.querySelector('#theme-toggle');
-const savedTheme = localStorage.getItem('gadget-icons-theme');
+let savedTheme;
+try { savedTheme = localStorage.getItem('gadget-icons-theme'); } catch { /* Storage is optional. */ }
 const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
 function setTheme(theme) {
@@ -222,13 +229,49 @@ function setTheme(theme) {
   document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#11110f' : '#f5f4f0';
 }
 
-setTheme(savedTheme || preferredTheme);
+setTheme(['light', 'dark'].includes(savedTheme) ? savedTheme : preferredTheme);
 themeToggle.addEventListener('click', () => {
   const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-  localStorage.setItem('gadget-icons-theme', nextTheme);
+  try { localStorage.setItem('gadget-icons-theme', nextTheme); } catch { /* Storage is optional. */ }
   setTheme(nextTheme);
 });
 
 renderHero();
 renderFilters();
 renderGrid();
+
+function restoreLink() {
+  const params = new URL(location.href).searchParams;
+  const name = params.get('icon');
+  if (!names.includes(name)) {
+    if (dialog.open) dialog.close();
+    return;
+  }
+  const size = Number(params.get('size'));
+  const stroke = Number(params.get('stroke'));
+  state.size = size >= 20 && size <= 56 && size % 2 === 0 ? size : 44;
+  state.stroke = stroke >= 1 && stroke <= 2.4 ? Math.round(stroke * 10) / 10 : 1.6;
+  sizeControl.value = state.size;
+  sizeValue.value = state.size;
+  strokeControl.value = state.stroke;
+  strokeValue.value = state.stroke.toFixed(1);
+  renderGrid();
+  openDetails(name, false);
+}
+window.addEventListener('popstate', restoreLink);
+restoreLink();
+
+document.querySelectorAll('[data-example-icon]').forEach((slot) => {
+  slot.innerHTML = svgMarkup(slot.dataset.exampleIcon, { size: 24, stroke: 1.6 });
+});
+document.querySelector('#examples').addEventListener('click', (event) => {
+  const button = event.target.closest('[data-example-category]');
+  if (!button) return;
+  state.category = button.dataset.exampleCategory;
+  state.query = '';
+  search.value = '';
+  renderFilters();
+  renderGrid();
+  search.focus({ preventScroll: true });
+  document.querySelector('#library').scrollIntoView({ behavior: 'smooth' });
+});

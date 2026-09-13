@@ -1,0 +1,58 @@
+// Generated from icons.mjs by npm run build. Do not edit directly.
+export type IconName =
+  | 'laptop'
+  | 'phone'
+  | 'headphones'
+  | 'microphone'
+  | 'earbuds'
+  | 'tv'
+  | 'monitor'
+  | 'keyboard'
+  | 'mouse'
+  | 'camera'
+  | 'camera-lens'
+  | 'tripod'
+  | 'vlog-camera'
+  | 'action-camera'
+  | 'webcam'
+  | 'drone'
+  | 'smartwatch'
+  | 'smart-glasses'
+  | 'smart-ring'
+  | 'tablet'
+  | 'e-reader'
+  | 'router'
+  | 'powerbank'
+  | 'charger'
+  | 'usb-cable'
+  | 'usb-hub'
+  | 'backpack'
+  | 'mini-pc'
+  | 'nas'
+  | 'gpu'
+  | 'processor'
+  | 'motherboard'
+  | 'pc'
+  | 'smart-speaker'
+  | 'smart-display'
+  | 'security-camera'
+  | 'robot-vacuum'
+  | 'external-hard-drive'
+  | 'sd-card'
+  | 'wireless-charging-stand'
+  | 'soundbar'
+  | 'ssd'
+  | 'projector'
+  | 'controller'
+  | 'console'
+  | 'handheld-console'
+  | 'vr-headset';
+export interface IconDefinition { label: string; paths: string; }
+export interface SvgOptions {
+  size?: number;
+  className?: string;
+  strokeWidth?: number;
+}
+export declare const icons: Record<IconName, IconDefinition>;
+export declare const names: IconName[];
+export declare function svg(name: IconName, options?: SvgOptions): string;

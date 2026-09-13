@@ -710,6 +710,7 @@ input[type="range"] {
 }
 
 .dialog-content {
+  min-width: 0;
   align-self: center;
   padding: 72px 48px 48px;
 }
@@ -744,7 +745,44 @@ input[type="range"] {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.export-spec { color: var(--muted); font-size: 0.875rem; margin: 12px 0 0; }
+.examples { padding-block: 72px 96px; border-top: 1px solid var(--line); }
+.examples-heading { max-width: 720px; margin-bottom: 40px; }
+.examples-heading h2 { font-size: clamp(2rem, 4vw, 3.8rem); line-height: 1.08; }
+.examples-heading > p:last-child { color: var(--muted); margin: 18px 0 0; font-size: 1.125rem; }
+.examples-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.example-card { min-width: 0; padding: 32px; border: 1px solid var(--line); border-radius: 24px; background: var(--surface); }
+.example-caption { color: var(--muted); font: 0.75rem ui-monospace, monospace; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 36px; }
+.example-card h3 { font-size: 1.65rem; line-height: 1.15; letter-spacing: -0.035em; margin: 0 0 10px; }
+.example-description { color: var(--muted); margin-bottom: 24px; }
+.spec-list { margin: 0 0 20px; }
+.spec-list > div { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 66px; border-bottom: 1px solid var(--line); }
+.spec-list dt { display: flex; gap: 12px; align-items: center; }
+.spec-list dd { margin: 0; color: var(--muted); font-size: 0.875rem; }
+[data-example-icon] { display: inline-flex; flex: 0 0 auto; }
+.example-footnote { color: var(--muted); font-size: 0.75rem; }
+.example-menu { display: grid; gap: 8px; }
+.example-menu button { display: flex; align-items: center; gap: 14px; min-height: 54px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; background: transparent; cursor: pointer; text-align: left; }
+.example-menu button > span:last-child { margin-left: auto; color: var(--muted); }
+.example-menu button:hover { background: var(--surface-soft); border-color: var(--line-strong); }
+.comparison-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; margin: 0 0 20px; }
+.comparison-table th { font-weight: 500; text-align: left; }
+.comparison-table td, .comparison-table th { padding: 14px 4px; border-bottom: 1px solid var(--line); }
+.comparison-table td { color: var(--muted); }
+.comparison-table thead th { padding-top: 0; }
+.comparison-table thead [data-example-icon] { display: flex; margin-bottom: 10px; }
+.icon-label, .icon-name { white-space: normal; overflow-wrap: anywhere; }
+@media (max-width: 1100px) {
+  .example-card { padding: 24px; }
+}
+@media (max-width: 860px) {
+  .examples-grid { grid-template-columns: 1fr; }
+  .example-card { padding: 28px; }
+  .examples { padding-block: 54px 72px; }
 }
 
 .dialog-actions {

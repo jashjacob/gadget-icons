@@ -159,7 +159,7 @@ export const icons = {
   },
   'smart-speaker': {
     label: 'Smart speaker',
-    paths: '<rect x="6" y="3" width="12" height="18" rx="4"/><path d="M9 7h6"/><circle cx="12" cy="15" r="3"/>'
+    paths: '<rect x="6" y="3" width="12" height="18" rx="4"/><path d="M9.5 6.5h5"/><path d="M9 11h0M12 11h0M15 11h0M9 14h0M12 14h0M15 14h0M9 17h0M12 17h0M15 17h0"/>'
   },
   'smart-display': {
     label: 'Smart display',
@@ -171,7 +171,19 @@ export const icons = {
   },
   'robot-vacuum': {
     label: 'Robot vacuum',
-    paths: '<circle cx="12" cy="13" r="8"/><rect x="9" y="3" width="6" height="3" rx="1.5"/><path d="M7.5 14h9M9 18h6"/>'
+    paths: '<path d="M6 14V4a1.5 1.5 0 0 1 1.5-1.5h9A1.5 1.5 0 0 1 18 4v10M10 6h4"/><rect x="3" y="14" width="18" height="7" rx="3.5"/><path d="M4 17.5h16M9.5 14v-1a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v1"/>'
+  },
+  'external-hard-drive': {
+    label: 'External hard drive',
+    paths: '<rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M5 16.5h14M8 19h3"/><circle cx="16" cy="19" r="0.7" fill="currentColor" stroke="none"/>'
+  },
+  'sd-card': {
+    label: 'SD card',
+    paths: '<path d="M9 3h8.5A1.5 1.5 0 0 1 19 4.5v15a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 5 19.5V7z"/><path d="M11 5.5v3M14 5.5v3M17 5.5v3"/><rect x="8" y="12" width="8" height="6" rx="1"/>'
+  },
+  'wireless-charging-stand': {
+    label: 'Wireless charging stand',
+    paths: '<circle cx="12" cy="8" r="5.5"/><path d="M12 13.5V20M6 21h12M12.5 5l-2 3h3l-2 3"/>'
   },
   soundbar: {
     label: 'Soundbar',

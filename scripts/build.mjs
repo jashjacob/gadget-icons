@@ -32,6 +32,22 @@ async function writeGalleryData() {
   await writeFile(join(galleryDir, 'icons-data.js'), source);
 }
 
+async function writeTypes() {
+  const union = names.map((name) => `  | '${name}'`).join('\n');
+  await writeFile(join(root, 'icons.d.mts'), `// Generated from icons.mjs by npm run build. Do not edit directly.
+export type IconName =\n${union};
+export interface IconDefinition { label: string; paths: string; }
+export interface SvgOptions {
+  size?: number;
+  className?: string;
+  strokeWidth?: number;
+}
+export declare const icons: Record<IconName, IconDefinition>;
+export declare const names: IconName[];
+export declare function svg(name: IconName, options?: SvgOptions): string;
+`);
+}
+
 // A curated front row, not the whole set: a hero this size can hold about
 // 6-9 icons before it stops reading as "a few strong examples" and starts
 // reading as "an arbitrary slice of the grid below it." Picked for category
@@ -130,5 +146,6 @@ ${parts.join('\n')}
 
 await writeIconFiles();
 await writeGalleryData();
+await writeTypes();
 await writePreview();
 console.log(`Wrote ${names.length} icon files, preview.svg, and docs/icons-data.js`);

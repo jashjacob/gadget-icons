@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Browse and copy 44 open-source outline SVG icons for modern gadgets, hardware, wearables, cameras, and smart-home devices.">
+    <meta name="description" content="Browse and copy 47 open-source outline SVG icons for modern gadgets, hardware, wearables, cameras, and smart-home devices.">
     <meta name="theme-color" content="#f5f4f0">
     <meta property="og:title" content="Gadget Icons">
-    <meta property="og:description" content="44 open-source outline SVG icons for the devices we use every day.">
+    <meta property="og:description" content="47 open-source outline SVG icons for the devices we use every day.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jashjacob.github.io/gadget-icons/">
     <meta property="og:site_name" content="Gadget Icons">
@@ -43,7 +43,7 @@
     <main>
       <section class="intro shell" aria-labelledby="page-title">
         <div class="intro-copy">
-          <p class="eyebrow">44 icons · SVG · MIT licensed</p>
+          <p class="eyebrow">47 icons · SVG · MIT licensed</p>
           <h1 id="page-title">Technology, drawn with less noise.</h1>
           <p class="lede">A focused set of outline icons for the devices we use every day. Made for thisismynext.in and open-sourced for everyone.</p>
 
@@ -63,7 +63,7 @@
             <p class="section-kicker">The collection</p>
             <h2 id="library-title">Find your icon</h2>
           </div>
-          <p class="result-count" id="result-count" aria-live="polite">44 icons</p>
+          <p class="result-count" id="result-count" aria-live="polite">47 icons</p>
         </div>
 
         <div class="toolbar" aria-label="Icon controls">
@@ -74,7 +74,7 @@
             </svg>
             <span class="sr-only">Search icons</span>
             <input id="icon-search" type="search" placeholder="Search icons" autocomplete="off">
-            <kbd>/</kbd>
+            <kbd aria-hidden="true">/</kbd>
           </label>
 
           <div class="control-group">
@@ -94,6 +94,49 @@
         <div class="empty-state" id="empty-state" hidden>
           <p>No icons found.</p>
           <button type="button" id="clear-search">Clear search</button>
+        </div>
+      </section>
+
+      <section class="examples shell" id="examples" aria-labelledby="examples-title">
+        <div class="examples-heading">
+          <p class="section-kicker">In good company</p>
+          <h2 id="examples-title">Small details. Real interfaces.</h2>
+          <p>A few ways to put the collection to work.</p>
+        </div>
+        <div class="examples-grid">
+          <article class="example-card example-specs">
+            <p class="example-caption">01 / Product details</p>
+            <h3>A little more portable.</h3>
+            <p class="example-description">The essentials, at a glance.</p>
+            <dl class="spec-list">
+              <div><dt><span data-example-icon="laptop"></span>Display</dt><dd>14 inches</dd></div>
+              <div><dt><span data-example-icon="processor"></span>Processor</dt><dd>8 cores</dd></div>
+              <div><dt><span data-example-icon="ssd"></span>Storage</dt><dd>512 GB</dd></div>
+            </dl>
+            <span class="example-footnote">Illustrative specifications</span>
+          </article>
+          <article class="example-card example-navigation">
+            <p class="example-caption">02 / Category menu</p>
+            <h3>What’s your next?</h3>
+            <p class="example-description">Pick a category to explore its icons.</p>
+            <div class="example-menu">
+              <button type="button" data-example-category="Computing"><span data-example-icon="laptop"></span>Computers<span aria-hidden="true">↗</span></button>
+              <button type="button" data-example-category="Audio"><span data-example-icon="headphones"></span>Audio<span aria-hidden="true">↗</span></button>
+              <button type="button" data-example-category="Cameras"><span data-example-icon="camera"></span>Cameras<span aria-hidden="true">↗</span></button>
+              <button type="button" data-example-category="Smart home"><span data-example-icon="robot-vacuum"></span>Smart home<span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+          <article class="example-card example-comparison">
+            <p class="example-caption">03 / Side by side</p>
+            <h3>A place for every file.</h3>
+            <p class="example-description">Make the differences easy to see.</p>
+            <table class="comparison-table">
+              <caption class="sr-only">Example comparison of portable and home storage</caption>
+              <thead><tr><th scope="col"><span class="sr-only">Feature</span></th><th scope="col"><span data-example-icon="external-hard-drive"></span>Portable</th><th scope="col"><span data-example-icon="nas"></span>At home</th></tr></thead>
+              <tbody><tr><th scope="row">Capacity</th><td>2 TB</td><td>8 TB</td></tr><tr><th scope="row">Connect</th><td>USB-C</td><td>Network</td></tr><tr><th scope="row">Best for</th><td>Travel</td><td>Backups</td></tr></tbody>
+            </table>
+            <span class="example-footnote">Illustrative specifications</span>
+          </article>
         </div>
       </section>
 
@@ -118,11 +161,13 @@
           <p class="section-kicker" id="dialog-category"></p>
           <h2 id="dialog-title"></h2>
           <code class="dialog-name" id="dialog-name"></code>
+          <p class="export-spec" id="export-spec"></p>
           <div class="code-preview"><code id="code-preview"></code></div>
           <div class="dialog-actions">
             <button class="primary-action" id="copy-svg" type="button">Copy SVG</button>
             <button class="secondary-action" id="copy-js" type="button">Copy JavaScript</button>
             <button class="secondary-action" id="download-svg" type="button">Download</button>
+            <button class="secondary-action" id="copy-link" type="button">Copy link</button>
           </div>
         </div>
       </div>
