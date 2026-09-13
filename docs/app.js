@@ -240,6 +240,20 @@ renderHero();
 renderFilters();
 renderGrid();
 
+const collectionCount = document.querySelector('#collection-count');
+document.querySelector('#collection-counter').setAttribute('aria-label', `${names.length} icons in the collection`);
+collectionCount.textContent = names.length;
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  let counterStart;
+  function animateCount(timestamp) {
+    counterStart ??= timestamp;
+    const progress = Math.min((timestamp - counterStart) / 900, 1);
+    collectionCount.textContent = Math.round(names.length * (1 - (1 - progress) ** 3));
+    if (progress < 1) requestAnimationFrame(animateCount);
+  }
+  requestAnimationFrame(animateCount);
+}
+
 function restoreLink() {
   const params = new URL(location.href).searchParams;
   const name = params.get('icon');

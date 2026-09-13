@@ -166,7 +166,7 @@ export const icons = {
   },
   "ssd": {
     "label": "SSD",
-    "paths": "<rect x=\"2.5\" y=\"7\" width=\"19\" height=\"10\" rx=\"1.5\"/><rect x=\"5\" y=\"9.5\" width=\"4\" height=\"5\" rx=\"0.8\"/><rect x=\"11\" y=\"9.5\" width=\"4\" height=\"5\" rx=\"0.8\"/><circle cx=\"19\" cy=\"12\" r=\"1\"/>"
+    "paths": "<path d=\"M3 8h16v8H3a1 1 0 0 1-1-1v-1.5a1.5 1.5 0 0 0 0-3V9a1 1 0 0 1 1-1zM19 10h3v4h-3\"/><rect x=\"6\" y=\"10.5\" width=\"3\" height=\"3\" rx=\"0.5\"/><rect x=\"12\" y=\"10.5\" width=\"3\" height=\"3\" rx=\"0.5\"/>"
   },
   "projector": {
     "label": "Projector",
@@ -182,7 +182,7 @@ export const icons = {
   },
   "handheld-console": {
     "label": "Handheld console",
-    "paths": "<rect x=\"2.5\" y=\"6.5\" width=\"19\" height=\"11\" rx=\"3\"/><rect x=\"8.5\" y=\"8.5\" width=\"7\" height=\"7\" rx=\"1.2\"/><path d=\"M5.5 9.5v5M3.5 12h4\"/><circle cx=\"18.5\" cy=\"10.5\" r=\"0.8\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"17.2\" cy=\"13.5\" r=\"0.8\" fill=\"currentColor\" stroke=\"none\"/>"
+    "paths": "<rect x=\"2.5\" y=\"6.5\" width=\"19\" height=\"11\" rx=\"3\"/><rect x=\"9\" y=\"8.5\" width=\"6\" height=\"7\" rx=\"1.2\"/><path d=\"M5.5 11v2M4.5 12h2\"/><circle cx=\"18.5\" cy=\"10.5\" r=\"0.8\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"18.5\" cy=\"13.5\" r=\"0.8\" fill=\"currentColor\" stroke=\"none\"/>"
   },
   "vr-headset": {
     "label": "VR headset",
