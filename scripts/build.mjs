@@ -1,6 +1,6 @@
-// Regenerates the two derived artifacts from icons.mjs, the single source of
-// truth: one standalone .svg file per icon in icons/, and the preview grid
-// (preview.svg) embedded in the README. Run with `npm run build`.
+// Regenerates the derived artifacts from icons.mjs, the single source of
+// truth: standalone SVG files, the README preview, and the gallery data.
+// Run with `npm run build`.
 import { mkdir, writeFile, readdir, unlink } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -8,6 +8,7 @@ import { icons, names } from '../icons.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const iconsDir = join(root, 'icons');
+const galleryDir = join(root, 'docs');
 
 async function writeIconFiles() {
   await mkdir(iconsDir, { recursive: true });
@@ -22,6 +23,13 @@ async function writeIconFiles() {
     const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${icons[name].paths}</svg>\n`;
     return writeFile(join(iconsDir, `${name}.svg`), svg);
   }));
+}
+
+async function writeGalleryData() {
+  await mkdir(galleryDir, { recursive: true });
+  const data = Object.fromEntries(names.map((name) => [name, icons[name]]));
+  const source = `// Generated from icons.mjs by npm run build. Do not edit directly.\nexport const icons = ${JSON.stringify(data, null, 2)};\nexport const names = ${JSON.stringify(names, null, 2)};\n`;
+  await writeFile(join(galleryDir, 'icons-data.js'), source);
 }
 
 // A curated front row, not the whole set: a hero this size can hold about
@@ -121,5 +129,6 @@ ${parts.join('\n')}
 }
 
 await writeIconFiles();
+await writeGalleryData();
 await writePreview();
-console.log(`Wrote ${names.length} icon files to icons/ and preview.svg`);
+console.log(`Wrote ${names.length} icon files, preview.svg, and docs/icons-data.js`);

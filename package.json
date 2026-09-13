@@ -1,8 +1,9 @@
 {
   "name": "gadget-icons",
   "version": "0.2.0",
-  "description": "Carefully drawn SVG icons for modern hardware, cameras, computing, wearables, and home technology.",
+  "description": "Open-source outline SVG icons for gadgets, hardware, cameras, computers, wearables, and smart-home devices.",
   "type": "module",
+  "sideEffects": false,
   "main": "icons.mjs",
   "exports": {
     ".": "./icons.mjs",
@@ -19,11 +20,24 @@
   "keywords": [
     "icons",
     "svg",
+    "tech",
+    "svg-icons",
+    "device-icons",
+    "hardware-icons",
+    "technology-icons",
+    "outline-icons",
+    "ui-icons",
+    "consumer-electronics",
+    "icon-library",
     "gadgets",
-    "tech"
+    "smart-home"
   ],
   "author": "Jash Jacob",
   "license": "MIT",
+  "homepage": "https://jashjacob.github.io/gadget-icons/",
+  "bugs": {
+    "url": "https://github.com/jashjacob/gadget-icons/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/jashjacob/gadget-icons.git"

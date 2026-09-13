@@ -2,9 +2,11 @@
 
 Icons for the devices we use every day.
 
-A small set of SVG icons for modern hardware, cameras, computers, wearables, and home technology.
+A focused collection of 44 open-source outline SVG icons for modern gadgets, hardware, cameras, computers, wearables, and smart-home devices.
 
 We originally made these for [thisismynext.in](https://thisismynext.in). Now they are open source for anyone to use.
+
+[Browse and copy every icon](https://jashjacob.github.io/gadget-icons/)
 
 ![Gadget Icons preview](preview.svg)
 
@@ -12,7 +14,13 @@ We originally made these for [thisismynext.in](https://thisismynext.in). Now the
 
 ## Installation
 
-Install it from npm with `npm install gadget-icons`, or copy any standalone SVG from [`icons/`](icons).
+Install the package:
+
+```bash
+npm install gadget-icons
+```
+
+You can also copy any standalone SVG from [`icons/`](icons).
 
 ## Basic usage
 
@@ -45,6 +53,20 @@ names; // every available icon name
 
 `svg(name, { size, className, strokeWidth })` throws if the icon does not exist. Check `names` first if the name comes from user input.
 
+## Icons
+
+Every icon name below is also its SVG filename and JavaScript key.
+
+| Category | Icons |
+| --- | --- |
+| Computing | `laptop`, `monitor`, `keyboard`, `mouse`, `mini-pc`, `nas`, `gpu`, `processor`, `motherboard`, `pc`, `ssd` |
+| Cameras | `camera`, `camera-lens`, `tripod`, `vlog-camera`, `action-camera`, `webcam`, `drone` |
+| Audio | `headphones`, `microphone`, `earbuds`, `smart-speaker`, `soundbar` |
+| Mobile and wearables | `phone`, `smartwatch`, `smart-glasses`, `smart-ring`, `tablet`, `e-reader` |
+| Smart home | `tv`, `router`, `smart-display`, `security-camera`, `robot-vacuum`, `projector` |
+| Gaming | `controller`, `console`, `handheld-console`, `vr-headset` |
+| Accessories | `powerbank`, `charger`, `usb-cable`, `usb-hub`, `backpack` |
+
 ## Designed as a system
 
 - Recognizable silhouettes over literal detail
@@ -60,7 +82,7 @@ Add an entry to the `icons` object in [`icons.mjs`](icons.mjs), then regenerate 
 npm run build
 ```
 
-This rewrites every file in [`icons/`](icons) and updates `preview.svg`. Do not edit the generated icon files directly because your changes will be overwritten.
+This rewrites every file in [`icons/`](icons), updates `preview.svg`, and refreshes the gallery data in [`docs/`](docs). Do not edit the generated icon files directly because your changes will be overwritten.
 
 ## License
 

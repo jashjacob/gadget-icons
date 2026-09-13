@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Browse and copy 44 open-source outline SVG icons for modern gadgets, hardware, wearables, cameras, and smart-home devices.">
+    <meta name="theme-color" content="#f5f4f0">
+    <meta property="og:title" content="Gadget Icons">
+    <meta property="og:description" content="44 open-source outline SVG icons for the devices we use every day.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jashjacob.github.io/gadget-icons/">
+    <meta property="og:site_name" content="Gadget Icons">
+    <meta name="twitter:card" content="summary">
+    <link rel="canonical" href="https://jashjacob.github.io/gadget-icons/">
+    <title>Gadget Icons | Open-source SVG device icons</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23181714'/%3E%3Crect x='8' y='8' width='16' height='11' rx='2' fill='none' stroke='%23f7f6f2' stroke-width='2'/%3E%3Cpath d='M6 23h20l-2-3H8z' fill='none' stroke='%23f7f6f2' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#library">Skip to icons</a>
+
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="./" aria-label="Gadget Icons home">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="4" y="4" width="16" height="10" rx="1.5"></rect>
+            <path d="M2 18.5h20l-1.8-3.5H3.8z"></path>
+          </svg>
+          <span>Gadget Icons</span>
+        </a>
+
+        <nav class="header-actions" aria-label="Project links">
+          <a href="https://www.npmjs.com/package/gadget-icons">npm</a>
+          <a href="https://github.com/jashjacob/gadget-icons">GitHub</a>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark appearance">
+            <span aria-hidden="true">◐</span>
+            <span class="theme-label">Dark</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro shell" aria-labelledby="page-title">
+        <div class="intro-copy">
+          <p class="eyebrow">44 icons · SVG · MIT licensed</p>
+          <h1 id="page-title">Technology, drawn with less noise.</h1>
+          <p class="lede">A focused set of outline icons for the devices we use every day. Made for thisismynext.in and open-sourced for everyone.</p>
+
+          <div class="install-row" aria-label="npm installation command">
+            <span class="prompt" aria-hidden="true">$</span>
+            <code>npm install gadget-icons</code>
+            <button class="install-copy" id="install-copy" type="button">Copy</button>
+          </div>
+        </div>
+
+        <div class="hero-icons" id="hero-icons" aria-hidden="true"></div>
+      </section>
+
+      <section class="library shell" id="library" aria-labelledby="library-title">
+        <div class="library-heading">
+          <div>
+            <p class="section-kicker">The collection</p>
+            <h2 id="library-title">Find your icon</h2>
+          </div>
+          <p class="result-count" id="result-count" aria-live="polite">44 icons</p>
+        </div>
+
+        <div class="toolbar" aria-label="Icon controls">
+          <label class="search-field" for="icon-search">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="6"></circle>
+              <path d="m16 16 4 4"></path>
+            </svg>
+            <span class="sr-only">Search icons</span>
+            <input id="icon-search" type="search" placeholder="Search icons" autocomplete="off">
+            <kbd>/</kbd>
+          </label>
+
+          <div class="control-group">
+            <label for="size-control">Size <output id="size-value">44</output></label>
+            <input id="size-control" type="range" min="20" max="56" step="2" value="44">
+          </div>
+
+          <div class="control-group">
+            <label for="stroke-control">Stroke <output id="stroke-value">1.6</output></label>
+            <input id="stroke-control" type="range" min="1" max="2.4" step="0.1" value="1.6">
+          </div>
+        </div>
+
+        <div class="filters" id="category-filters" aria-label="Filter icons by category"></div>
+
+        <div class="icon-grid" id="icon-grid"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <p>No icons found.</p>
+          <button type="button" id="clear-search">Clear search</button>
+        </div>
+      </section>
+
+      <section class="origin shell" aria-label="Project origin">
+        <p>Built for <a href="https://thisismynext.in">thisismynext.in</a>.</p>
+        <p>Available as clean SVG files with no runtime dependencies.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <p>Gadget Icons</p>
+        <p>Designed by Jash Jacob · MIT License</p>
+      </div>
+    </footer>
+
+    <dialog class="icon-dialog" id="icon-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-panel">
+        <button class="dialog-close" id="dialog-close" type="button" aria-label="Close icon details">×</button>
+        <div class="dialog-preview" id="dialog-preview"></div>
+        <div class="dialog-content">
+          <p class="section-kicker" id="dialog-category"></p>
+          <h2 id="dialog-title"></h2>
+          <code class="dialog-name" id="dialog-name"></code>
+          <div class="code-preview"><code id="code-preview"></code></div>
+          <div class="dialog-actions">
+            <button class="primary-action" id="copy-svg" type="button">Copy SVG</button>
+            <button class="secondary-action" id="copy-js" type="button">Copy JavaScript</button>
+            <button class="secondary-action" id="download-svg" type="button">Download</button>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
