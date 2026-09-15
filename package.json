@@ -1,6 +1,6 @@
 {
   "name": "gadget-icons",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Open-source outline SVG icons for gadgets, hardware, cameras, computers, wearables, and smart-home devices.",
   "type": "module",
   "sideEffects": false,

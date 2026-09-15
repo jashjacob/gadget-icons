@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.0 - 2026-09-15
+
+- Added 11 new icons for current gadgets, including foldable phone, GaN charger, charging station, Bluetooth tracker, streaming stick, video doorbell, smart bulb, air purifier, dash camera, camera gimbal, and audio interface.
+- Redrew the SD card with a clipped corner, lock switch, and contact pads so it reads clearly as an SD card.
+- Updated the gallery, search aliases, TypeScript declarations, README, and generated preview. The collection now includes 58 icons.
+
 ## 0.3.0 - 2026-09-13
 
 - Added external hard drive, SD card, and wireless charging stand icons. The collection now includes 47 icons.

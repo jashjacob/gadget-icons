@@ -46,7 +46,18 @@ export type IconName =
   | 'controller'
   | 'console'
   | 'handheld-console'
-  | 'vr-headset';
+  | 'vr-headset'
+  | 'foldable-phone'
+  | 'gan-charger'
+  | 'charging-station'
+  | 'bluetooth-tracker'
+  | 'streaming-stick'
+  | 'video-doorbell'
+  | 'smart-bulb'
+  | 'air-purifier'
+  | 'dash-camera'
+  | 'camera-gimbal'
+  | 'audio-interface';
 export interface IconDefinition { label: string; paths: string; }
 export interface SvgOptions {
   size?: number;

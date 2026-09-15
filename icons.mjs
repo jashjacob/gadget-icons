@@ -179,7 +179,7 @@ export const icons = {
   },
   'sd-card': {
     label: 'SD card',
-    paths: '<path d="M9 3h8.5A1.5 1.5 0 0 1 19 4.5v15a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 5 19.5V7z"/><path d="M11 5.5v3M14 5.5v3M17 5.5v3"/><rect x="8" y="12" width="8" height="6" rx="1"/>'
+    paths: '<path d="M9 3h9a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8z"/><path d="M4 11h2v3H4M10 5.5v4M12.5 5.5v4M15 5.5v4M17.5 5.5v4"/>'
   },
   'wireless-charging-stand': {
     label: 'Wireless charging stand',
@@ -212,6 +212,50 @@ export const icons = {
   'vr-headset': {
     label: 'VR headset',
     paths: '<path d="M4 9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a3 3 0 0 1-3 3h-1.5a1.5 1.5 0 0 1-1.4-1l-.5-1.3a1.5 1.5 0 0 0-2.8 0L10.4 16a1.5 1.5 0 0 1-1.4 1H7a3 3 0 0 1-3-3z"/><circle cx="7.5" cy="11" r="1" fill="currentColor" stroke="none"/><circle cx="16.5" cy="11" r="1" fill="currentColor" stroke="none"/>'
+  },
+  'foldable-phone': {
+    label: 'Foldable phone',
+    paths: '<path d="M4.5 3.5H11v17H4.5A1.5 1.5 0 0 1 3 19V5a1.5 1.5 0 0 1 1.5-1.5zM13 3.5h6.5A1.5 1.5 0 0 1 21 5v14a1.5 1.5 0 0 1-1.5 1.5H13z"/><path d="M11 4.5v15M13 4.5v15"/><circle cx="17.5" cy="6.5" r="0.7" fill="currentColor" stroke="none"/>'
+  },
+  'gan-charger': {
+    label: 'GaN charger',
+    paths: '<path d="M9 5V2.5M15 5V2.5"/><rect x="6" y="5" width="12" height="16.5" rx="1.5"/><rect x="9.5" y="17.5" width="5" height="1.5" rx="0.75"/><path d="M12.5 8.5l-2 3h3l-2 3"/>'
+  },
+  'charging-station': {
+    label: 'Charging station',
+    paths: '<rect x="2.5" y="18.5" width="19" height="3" rx="1.5"/><rect x="3.5" y="3" width="8" height="13" rx="1.5"/><circle cx="17.5" cy="10.5" r="3"/><path d="M7.5 16v2.5M17.5 13.5v5"/><path d="M8 6l-2.5 4h2L7 13l2.5-4h-2z" fill="currentColor" stroke="none"/>'
+  },
+  'bluetooth-tracker': {
+    label: 'Bluetooth tracker',
+    paths: '<circle cx="12" cy="12" r="9"/><circle cx="16.5" cy="7.5" r="1"/><path d="M7 10l6 5-3.5 2.5v-10L13 10l-6 5"/>'
+  },
+  'streaming-stick': {
+    label: 'Streaming stick',
+    paths: '<rect x="6.5" y="9.5" width="11" height="12" rx="1.5"/><path d="M8.5 9.5V8L6.5 6V2.5h11V6l-2 2v1.5M10 5v1M14 5v1"/><path d="M10.5 14l4 2.5-4 2.5z" fill="currentColor" stroke="none"/>'
+  },
+  'video-doorbell': {
+    label: 'Video doorbell',
+    paths: '<rect x="7" y="2.5" width="10" height="19" rx="3"/><circle cx="12" cy="8" r="2.5"/><circle cx="12" cy="16.5" r="2"/><circle cx="12" cy="8" r="0.7" fill="currentColor" stroke="none"/>'
+  },
+  'smart-bulb': {
+    label: 'Smart bulb',
+    paths: '<path d="M7 8.5a5 5 0 1 1 10 0c0 2.2-1.1 3.5-2.2 4.7-.5.6-.8 1.2-.8 1.8h-4c0-.6-.3-1.2-.8-1.8C8.1 12 7 10.7 7 8.5zM10 18h4M10.5 20.5h3"/><path d="M9.2 8.2a4 4 0 0 1 5.6 0M10.6 9.8a2 2 0 0 1 2.8 0"/><circle cx="12" cy="11.5" r="0.7" fill="currentColor" stroke="none"/>'
+  },
+  'air-purifier': {
+    label: 'Air purifier',
+    paths: '<rect x="7" y="2.5" width="10" height="14" rx="5"/><rect x="10" y="5.5" width="4" height="8" rx="2"/><path d="M7 16.5V20a1.5 1.5 0 0 0 1.5 1.5h7A1.5 1.5 0 0 0 17 20v-3.5M10 18.5v1M14 18.5v1"/>'
+  },
+  'dash-camera': {
+    label: 'Dash camera',
+    paths: '<path d="M12 3v3M8.5 3h7"/><rect x="3" y="6" width="18" height="13" rx="1.5"/><circle cx="14.5" cy="12.5" r="3.5"/><path d="M14.5 9v7M11.5 10.8l6 3.4M17.5 10.8l-6 3.4"/><rect x="5.5" y="8.5" width="3.5" height="2.5" rx="0.8"/><circle cx="7.2" cy="15.5" r="0.7" fill="currentColor" stroke="none"/>'
+  },
+  'camera-gimbal': {
+    label: 'Camera gimbal',
+    paths: '<rect x="2.5" y="4" width="10" height="7" rx="1.5"/><circle cx="7.5" cy="7.5" r="2"/><path d="M12.5 7.5h2.5a2 2 0 0 1 2 2V13h-4v8.5M11 21.5h4"/><circle cx="17" cy="13" r="1.5"/>'
+  },
+  'audio-interface': {
+    label: 'Audio interface',
+    paths: '<rect x="2.5" y="5.5" width="19" height="13" rx="1.5"/><circle cx="7.5" cy="12" r="3.2"/><circle cx="7.5" cy="10.5" r="0.55" fill="currentColor" stroke="none"/><circle cx="6.3" cy="12.8" r="0.55" fill="currentColor" stroke="none"/><circle cx="8.7" cy="12.8" r="0.55" fill="currentColor" stroke="none"/><circle cx="16.5" cy="10" r="2.4"/><path d="M16.5 10l1.2-1.2M14.5 16v-1a2 2 0 0 1 4 0v1M14.5 16h1M17.5 16h1"/>'
   }
 };
 
