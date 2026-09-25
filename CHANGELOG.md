@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.0 - 2026-09-25
+
+- Added Bluetooth speaker, smart plug, fitness band, USB flash drive, and printer icons.
+- Updated the gallery, search aliases, TypeScript declarations, README, and generated preview. The collection now includes 63 icons.
+
 ## 0.4.0 - 2026-09-15
 
 - Added 11 new icons for current gadgets, including foldable phone, GaN charger, charging station, Bluetooth tracker, streaming stick, video doorbell, smart bulb, air purifier, dash camera, camera gimbal, and audio interface.

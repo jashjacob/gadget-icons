@@ -231,6 +231,26 @@ export const icons = {
   "audio-interface": {
     "label": "Audio interface",
     "paths": "<rect x=\"2.5\" y=\"5.5\" width=\"19\" height=\"13\" rx=\"1.5\"/><circle cx=\"7.5\" cy=\"12\" r=\"3.2\"/><circle cx=\"7.5\" cy=\"10.5\" r=\"0.55\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"6.3\" cy=\"12.8\" r=\"0.55\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"8.7\" cy=\"12.8\" r=\"0.55\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"16.5\" cy=\"10\" r=\"2.4\"/><path d=\"M16.5 10l1.2-1.2M14.5 16v-1a2 2 0 0 1 4 0v1M14.5 16h1M17.5 16h1\"/>"
+  },
+  "bluetooth-speaker": {
+    "label": "Bluetooth speaker",
+    "paths": "<rect x=\"2.5\" y=\"7\" width=\"19\" height=\"10\" rx=\"5\"/><path d=\"M7 7.5v9M17 7.5v9M10 10h4M10 12h4M10 14h4M19.5 8V5.5A1.5 1.5 0 0 0 18 4h-1\"/>"
+  },
+  "smart-plug": {
+    "label": "Smart plug",
+    "paths": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"4\"/><circle cx=\"12\" cy=\"14\" r=\"4.5\"/><path d=\"M10.5 12.5v2M13.5 12.5v2M11 7.5a1.5 1.5 0 0 1 2 0\"/><circle cx=\"12\" cy=\"9\" r=\"0.6\" fill=\"currentColor\" stroke=\"none\"/>"
+  },
+  "fitness-band": {
+    "label": "Fitness band",
+    "paths": "<path d=\"M10 6.5V3.5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3M10 17.5v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3\"/><rect x=\"8.5\" y=\"6.5\" width=\"7\" height=\"11\" rx=\"3.5\"/><path d=\"M10.5 13v-1M12 13.5v-3M13.5 13v-1\"/>"
+  },
+  "usb-flash-drive": {
+    "label": "USB flash drive",
+    "paths": "<rect x=\"2.5\" y=\"7.5\" width=\"14\" height=\"9\" rx=\"2\"/><path d=\"M16.5 9h5v6h-5M18 11h1M18 13h1\"/><circle cx=\"6\" cy=\"12\" r=\"1.4\"/>"
+  },
+  "printer": {
+    "label": "Printer",
+    "paths": "<path d=\"M7 8V3h10v5M7 18H4a1 1 0 0 1-1-1v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7a1 1 0 0 1-1 1h-3\"/><rect x=\"7\" y=\"15\" width=\"10\" height=\"6\" rx=\".5\"/><circle cx=\"17.5\" cy=\"11.5\" r=\".7\" fill=\"currentColor\" stroke=\"none\"/>"
   }
 };
 export const names = [
@@ -291,5 +311,10 @@ export const names = [
   "air-purifier",
   "dash-camera",
   "camera-gimbal",
-  "audio-interface"
+  "audio-interface",
+  "bluetooth-speaker",
+  "smart-plug",
+  "fitness-band",
+  "usb-flash-drive",
+  "printer"
 ];

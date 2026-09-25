@@ -7,7 +7,7 @@ import { categories, matchesSearch, javascriptSnippet, iconLink } from '../docs/
 test('existing icons remain available and every icon has exactly one category', () => {
   const categorized = Object.values(categories).flat();
   assert.deepEqual([...categorized].sort(), [...names].sort());
-  assert.equal(names.length, 58);
+  assert.equal(names.length, 63);
   for (const name of ['robot-vacuum', 'smart-speaker', 'console', 'motherboard']) assert.ok(svg(name));
 });
 

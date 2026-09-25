@@ -1,11 +1,11 @@
 export const categories = {
-  Computing: ['laptop', 'monitor', 'keyboard', 'mouse', 'mini-pc', 'nas', 'gpu', 'processor', 'motherboard', 'pc', 'ssd', 'external-hard-drive'],
+  Computing: ['laptop', 'monitor', 'keyboard', 'mouse', 'mini-pc', 'nas', 'gpu', 'processor', 'motherboard', 'pc', 'ssd', 'external-hard-drive', 'printer'],
   Cameras: ['camera', 'camera-lens', 'tripod', 'vlog-camera', 'action-camera', 'dash-camera', 'camera-gimbal', 'webcam', 'drone', 'sd-card'],
-  Audio: ['headphones', 'microphone', 'earbuds', 'smart-speaker', 'soundbar', 'audio-interface'],
-  'Mobile & wearables': ['phone', 'foldable-phone', 'smartwatch', 'smart-glasses', 'smart-ring', 'tablet', 'e-reader'],
-  'Smart home': ['tv', 'streaming-stick', 'router', 'smart-display', 'security-camera', 'video-doorbell', 'smart-bulb', 'air-purifier', 'robot-vacuum', 'projector'],
+  Audio: ['headphones', 'microphone', 'earbuds', 'smart-speaker', 'soundbar', 'audio-interface', 'bluetooth-speaker'],
+  'Mobile & wearables': ['phone', 'foldable-phone', 'smartwatch', 'smart-glasses', 'smart-ring', 'tablet', 'e-reader', 'fitness-band'],
+  'Smart home': ['tv', 'streaming-stick', 'router', 'smart-display', 'security-camera', 'video-doorbell', 'smart-bulb', 'air-purifier', 'robot-vacuum', 'projector', 'smart-plug'],
   Gaming: ['controller', 'console', 'handheld-console', 'vr-headset'],
-  Accessories: ['powerbank', 'charger', 'gan-charger', 'charging-station', 'bluetooth-tracker', 'usb-cable', 'usb-hub', 'backpack', 'wireless-charging-stand']
+  Accessories: ['powerbank', 'charger', 'gan-charger', 'charging-station', 'bluetooth-tracker', 'usb-cable', 'usb-hub', 'backpack', 'wireless-charging-stand', 'usb-flash-drive']
 };
 
 export const categoryFor = Object.fromEntries(Object.entries(categories).flatMap(
@@ -29,6 +29,11 @@ const aliases = {
   'dash-camera': 'dashcam car camera vehicle recorder',
   'camera-gimbal': 'stabilizer handheld video camera rig',
   'audio-interface': 'sound card recording studio xlr usb',
+  'bluetooth-speaker': 'portable wireless audio grille outdoor speaker',
+  'smart-plug': 'wifi outlet socket connected home automation',
+  'fitness-band': 'fitness tracker activity wearable health band',
+  'usb-flash-drive': 'thumb drive memory stick usb storage',
+  printer: 'printing office paper document laser inkjet',
   ssd: 'solid state drive storage', nas: 'network attached storage server',
   'sd-card': 'sd memory card storage photography',
   'wireless-charging-stand': 'wireless charger charging stand qi magsafe phone',

@@ -2,7 +2,7 @@
 
 Icons for the devices we use every day.
 
-A focused collection of 58 open-source outline SVG icons for modern gadgets, hardware, cameras, computers, wearables, and smart-home devices.
+A focused collection of 63 open-source outline SVG icons for modern gadgets, hardware, cameras, computers, wearables, and smart-home devices.
 
 We originally made these for [thisismynext.in](https://thisismynext.in). Now they are open source for anyone to use.
 
@@ -72,13 +72,13 @@ Every icon name below is also its SVG filename and JavaScript key.
 
 | Category | Icons |
 | --- | --- |
-| Computing | `laptop`, `monitor`, `keyboard`, `mouse`, `mini-pc`, `nas`, `gpu`, `processor`, `motherboard`, `pc`, `ssd`, `external-hard-drive` |
+| Computing | `laptop`, `monitor`, `keyboard`, `mouse`, `mini-pc`, `nas`, `gpu`, `processor`, `motherboard`, `pc`, `ssd`, `external-hard-drive`, `printer` |
 | Cameras | `camera`, `camera-lens`, `tripod`, `vlog-camera`, `action-camera`, `dash-camera`, `camera-gimbal`, `webcam`, `drone`, `sd-card` |
-| Audio | `headphones`, `microphone`, `earbuds`, `smart-speaker`, `soundbar`, `audio-interface` |
-| Mobile and wearables | `phone`, `foldable-phone`, `smartwatch`, `smart-glasses`, `smart-ring`, `tablet`, `e-reader` |
-| Smart home | `tv`, `streaming-stick`, `router`, `smart-display`, `security-camera`, `video-doorbell`, `smart-bulb`, `air-purifier`, `robot-vacuum`, `projector` |
+| Audio | `headphones`, `microphone`, `earbuds`, `smart-speaker`, `soundbar`, `audio-interface`, `bluetooth-speaker` |
+| Mobile and wearables | `phone`, `foldable-phone`, `smartwatch`, `smart-glasses`, `smart-ring`, `tablet`, `e-reader`, `fitness-band` |
+| Smart home | `tv`, `streaming-stick`, `router`, `smart-display`, `security-camera`, `video-doorbell`, `smart-bulb`, `air-purifier`, `robot-vacuum`, `projector`, `smart-plug` |
 | Gaming | `controller`, `console`, `handheld-console`, `vr-headset` |
-| Accessories | `powerbank`, `charger`, `gan-charger`, `charging-station`, `bluetooth-tracker`, `usb-cable`, `usb-hub`, `backpack`, `wireless-charging-stand` |
+| Accessories | `powerbank`, `charger`, `gan-charger`, `charging-station`, `bluetooth-tracker`, `usb-cable`, `usb-hub`, `backpack`, `wireless-charging-stand`, `usb-flash-drive` |
 
 ## Designed as a system
 

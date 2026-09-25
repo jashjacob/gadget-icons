@@ -57,7 +57,12 @@ export type IconName =
   | 'air-purifier'
   | 'dash-camera'
   | 'camera-gimbal'
-  | 'audio-interface';
+  | 'audio-interface'
+  | 'bluetooth-speaker'
+  | 'smart-plug'
+  | 'fitness-band'
+  | 'usb-flash-drive'
+  | 'printer';
 export interface IconDefinition { label: string; paths: string; }
 export interface SvgOptions {
   size?: number;
