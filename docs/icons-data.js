@@ -251,6 +251,30 @@ export const icons = {
   "printer": {
     "label": "Printer",
     "paths": "<path d=\"M7 8V3h10v5M7 18H4a1 1 0 0 1-1-1v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7a1 1 0 0 1-1 1h-3\"/><rect x=\"7\" y=\"15\" width=\"10\" height=\"6\" rx=\".5\"/><circle cx=\"17.5\" cy=\"11.5\" r=\".7\" fill=\"currentColor\" stroke=\"none\"/>"
+  },
+  "smart-thermostat": {
+    "label": "Smart thermostat",
+    "paths": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><rect x=\"5\" y=\"7\" width=\"14\" height=\"10\" rx=\"1.5\"/><path d=\"M6.4 9.5a1.6 1.6 0 1 1 3.2 0c0 .7-.5 1.2-1.2 1.9l-2 2h3.3M11.4 9.8l1.1-1h.7v4.6\"/><circle cx=\"16.5\" cy=\"9.5\" r=\"0.9\"/>"
+  },
+  "smart-lock": {
+    "label": "Smart lock",
+    "paths": "<rect x=\"6.5\" y=\"2.5\" width=\"11\" height=\"19\" rx=\"2\"/><circle cx=\"10\" cy=\"6.5\" r=\"0.55\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"14\" cy=\"6.5\" r=\"0.55\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"10\" cy=\"9\" r=\"0.55\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"14\" cy=\"9\" r=\"0.55\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"10\" cy=\"11.5\" r=\"0.55\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"14\" cy=\"11.5\" r=\"0.55\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"12\" cy=\"16.5\" r=\"1.8\"/><path d=\"M13.8 16.5H21v2h-2v1.5\"/>"
+  },
+  "tv-remote": {
+    "label": "TV remote",
+    "paths": "<rect x=\"7\" y=\"2.5\" width=\"10\" height=\"19\" rx=\"3\"/><circle cx=\"12\" cy=\"5.5\" r=\"1\"/><circle cx=\"12\" cy=\"10\" r=\"2.6\"/><circle cx=\"12\" cy=\"10\" r=\"0.7\" fill=\"currentColor\" stroke=\"none\"/><path d=\"M9.5 15h1M13.5 15h1M9.5 17.5h1M13.5 17.5h1\"/>"
+  },
+  "stylus": {
+    "label": "Stylus",
+    "paths": "<path d=\"M12 2.5l3 3v10.8L12 21.5l-3-5.2V5.5z\"/><path d=\"M9 6h6M9.2 13h2.2M15 9v2\"/>"
+  },
+  "voice-recorder": {
+    "label": "Digital voice recorder",
+    "paths": "<rect x=\"6\" y=\"2.5\" width=\"12\" height=\"19\" rx=\"2\"/><path d=\"M9 5.5h1M12 5.5h1M15 5.5h0M9 7.5h1M12 7.5h1M15 7.5h0\"/><rect x=\"8.5\" y=\"10\" width=\"7\" height=\"4.5\" rx=\"0.6\"/><circle cx=\"12\" cy=\"17.5\" r=\"1.4\"/><circle cx=\"12\" cy=\"17.5\" r=\"0.55\" fill=\"currentColor\" stroke=\"none\"/>"
+  },
+  "smart-scale": {
+    "label": "Smart scale",
+    "paths": "<rect x=\"2.5\" y=\"2.5\" width=\"19\" height=\"19\" rx=\"3\"/><rect x=\"8\" y=\"4.5\" width=\"8\" height=\"3.5\" rx=\"0.6\"/><circle cx=\"7\" cy=\"12\" r=\"1.2\"/><circle cx=\"17\" cy=\"12\" r=\"1.2\"/><circle cx=\"7\" cy=\"18\" r=\"1.2\"/><circle cx=\"17\" cy=\"18\" r=\"1.2\"/>"
   }
 };
 export const names = [
@@ -316,5 +340,11 @@ export const names = [
   "smart-plug",
   "fitness-band",
   "usb-flash-drive",
-  "printer"
+  "printer",
+  "smart-thermostat",
+  "smart-lock",
+  "tv-remote",
+  "stylus",
+  "voice-recorder",
+  "smart-scale"
 ];

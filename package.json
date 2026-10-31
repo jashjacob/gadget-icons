@@ -1,6 +1,6 @@
 {
   "name": "gadget-icons",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Open-source outline SVG icons for gadgets, hardware, cameras, computers, wearables, and smart-home devices.",
   "type": "module",
   "sideEffects": false,
@@ -36,7 +36,13 @@
     "consumer-electronics",
     "icon-library",
     "gadgets",
-    "smart-home"
+    "smart-home",
+    "smart-thermostat",
+    "smart-lock",
+    "tv-remote",
+    "stylus",
+    "voice-recorder",
+    "smart-scale"
   ],
   "author": "Jash Jacob",
   "license": "MIT",

@@ -3,9 +3,9 @@ export const categories = {
   Cameras: ['camera', 'camera-lens', 'tripod', 'vlog-camera', 'action-camera', 'dash-camera', 'camera-gimbal', 'webcam', 'drone', 'sd-card'],
   Audio: ['headphones', 'microphone', 'earbuds', 'smart-speaker', 'soundbar', 'audio-interface', 'bluetooth-speaker'],
   'Mobile & wearables': ['phone', 'foldable-phone', 'smartwatch', 'smart-glasses', 'smart-ring', 'tablet', 'e-reader', 'fitness-band'],
-  'Smart home': ['tv', 'streaming-stick', 'router', 'smart-display', 'security-camera', 'video-doorbell', 'smart-bulb', 'air-purifier', 'robot-vacuum', 'projector', 'smart-plug'],
+  'Smart home': ['tv', 'streaming-stick', 'router', 'smart-display', 'security-camera', 'video-doorbell', 'smart-bulb', 'air-purifier', 'robot-vacuum', 'projector', 'smart-plug', 'smart-thermostat', 'smart-lock', 'tv-remote'],
   Gaming: ['controller', 'console', 'handheld-console', 'vr-headset'],
-  Accessories: ['powerbank', 'charger', 'gan-charger', 'charging-station', 'bluetooth-tracker', 'usb-cable', 'usb-hub', 'backpack', 'wireless-charging-stand', 'usb-flash-drive']
+  Accessories: ['powerbank', 'charger', 'gan-charger', 'charging-station', 'bluetooth-tracker', 'usb-cable', 'usb-hub', 'backpack', 'wireless-charging-stand', 'usb-flash-drive', 'stylus', 'smart-scale']
 };
 
 export const categoryFor = Object.fromEntries(Object.entries(categories).flatMap(
@@ -16,6 +16,12 @@ const aliases = {
   processor: 'cpu chip chipset', gpu: 'graphics video card', pc: 'desktop computer tower',
   laptop: 'notebook computer macbook', phone: 'smartphone mobile iphone android',
   'robot-vacuum': 'robot vacuum cleaner dock docking station cleaning',
+  'smart-thermostat': 'temperature climate control heating cooling hvac wall thermostat',
+  'smart-lock': 'door deadbolt keypad keyless entry security',
+  'tv-remote': 'remote control television tv infrared',
+  stylus: 'digital pen tablet pencil touchscreen drawing',
+  'voice-recorder': 'dictaphone audio recording handheld memo recorder',
+  'smart-scale': 'weighing weight body scale bathroom bluetooth health',
   'smart-speaker': 'speaker grille grill assistant voice audio',
   'external-hard-drive': 'external hard disk hdd portable storage backup',
   'foldable-phone': 'folding mobile smartphone flip',
