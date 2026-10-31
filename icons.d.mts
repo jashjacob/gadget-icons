@@ -62,7 +62,13 @@ export type IconName =
   | 'smart-plug'
   | 'fitness-band'
   | 'usb-flash-drive'
-  | 'printer';
+  | 'printer'
+  | 'smart-thermostat'
+  | 'smart-lock'
+  | 'tv-remote'
+  | 'stylus'
+  | 'voice-recorder'
+  | 'smart-scale';
 export interface IconDefinition { label: string; paths: string; }
 export interface SvgOptions {
   size?: number;

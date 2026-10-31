@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6.0 - 2026-10-31
+
+- Added smart thermostat, smart lock, TV remote, stylus, digital voice recorder, and smart scale icons.
+- Updated the gallery, search aliases, TypeScript declarations, README, and generated preview. The collection now includes 69 icons.
+
 ## 0.5.0 - 2026-09-25
 
 - Added Bluetooth speaker, smart plug, fitness band, USB flash drive, and printer icons.
